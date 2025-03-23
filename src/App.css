@@ -5,6 +5,24 @@
   text-align: center;
 }
 
+.align-center {
+  text-align: center;
+}
+
+.align-left {
+  text-align: left
+}
+
+.big-logo {
+  width: 75%;
+  max-width: 300px;
+} 
+
+.content-container {
+  padding: 5%;
+  margin: 5%
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -39,4 +57,36 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* Navbar styling */
+.navbar {
+  position: fixed;         /* Fix position to stay at the top */
+  top: 0;                  /* Ensure it's at the top */
+  left: 0;
+  width: 100%;             /* Full width of the page */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  z-index: 1500;           /* Ensure navbar stays above content */
+}
+
+.navbar-center .nav-links {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-center .nav-links li {
+  margin-right: 1rem;
+}
+
+.link-text {
+  color: #fff;
+  text-decoration: none;
 }
