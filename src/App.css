@@ -141,7 +141,7 @@
 }
 
 .link-text {
-  color: #fff;
+  color: var(--light-blue);
   text-decoration: none;
 }
 
@@ -166,7 +166,7 @@
 section {
   display: flex;
   align-items: center;
-  margin: 20px 0;
+  margin: 2em 0;
   color: var(--light-blue)
 }
 
@@ -188,3 +188,10 @@ section h1 {
 section p {
   font-size: 150%;
 }
+
+h1 {
+  font-family: "Fjalla One", sans-serif;
+  color: var(--light-blue)
+}
+
+

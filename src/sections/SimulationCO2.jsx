@@ -12,7 +12,7 @@ function SimulationCO2() {
     <div className="content-container align-center">
       <div className="text-container">
         <h1>Every Tree Counts</h1>
-        <p>Choose how many hectares of trees you want to plant and our simulator will tell you how much CO₂ emissions will be reduced. (1 hectare is enough space for about 1000-2000 trees) <br/>
+        <p>Choose how many hectares of trees you want to plant and our simulator will tell you how much CO₂ emissions will be reduced. (1 hectare is enough space for about 1000-2000 trees, which can absorb about 16,329,300 tonnes (16.33 megatonnes) of CO₂) <br/>
         <i>Hover over a country to see its CO₂ Emissions in megatonnes (million metric tons)</i></p>
       </div>
       <ChoroplethMap scaleFactor={scaleFactor} />
@@ -20,7 +20,6 @@ function SimulationCO2() {
         <InputSlider onChange={setSliderValue} labelText={"Hectares of trees (hundred thousands)"}/>
       </div>
       <div className="text-container align-left">
-        <h3>Interesting Facts about trees and CO2</h3>
         <ul>
           <li> Though trees cannot completely reverse climate change, they are able to capture a significant amount of carbon during their growth. 1 hectare (10,000 square meters) of trees (about 1,000-2,000 trees) can capture approximately 163.293 tons of CO2 in the atmosphere.  </li>
           <li> There are currently around 148 million acres of land in the United States–far more globally–that are opportunities to plant trees. In the US, this land mainly consists of pasture, along with urban open spaces, grassy areas, and corridors. </li>

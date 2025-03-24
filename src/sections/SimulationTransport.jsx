@@ -10,7 +10,7 @@ function SimulationTransport() {
 
   return (
     <div className="content-container align-center">
-      <h1>Every Commute</h1>
+      <h1>Every Commute Counts</h1>
       <p>See how much the global CO₂ Emissions drop based on how many people switch to public transportation using the slider below. (One person switching saves 2 tonnes of carbon emissions annually)<br/>
       <i>Hover over a country to see its CO₂ Emissions in megatonnes (million metric tons)</i></p>
       <ChoroplethMap scaleFactor={scaleFactor} />

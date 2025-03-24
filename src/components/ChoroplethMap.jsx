@@ -61,41 +61,41 @@ function ChoroplethMap({ scaleFactor }) {
   // Define color scale for emissions
   const getColor = (co2) => {
     return co2 > 10000 
-    ? '#520000'
+    ? '#350020'
     : co2 > 4000 
-    ? '#6F150C'
+    ? '#5F000C'
     : co2 > 2000 
-    ? '#8F2A17'
+    ? '#7F2A17'
     : co2 > 1000 
-    ? '#A03F23'
-    : co2 > 900 
-    ? '#CC552F'
-    : co2 > 800 
+    ? '#903F23'
+    : co2 > 830 
+    ? '#BC552F'
+    : co2 > 660 
     ? '#D26A3B'
-    : co2 > 700 
-    ? '#E97F46'
-    : co2 > 600 
-    ? '#FF9452' 
     : co2 > 500 
-    ? '#FFA66F'
-    : co2 > 400
-    ? '#FFB88C' 
+    ? '#E57F46'
+    : co2 > 450 
+    ? '#F59452' 
+    : co2 > 400 
+    ? '#F7A66F'
+    : co2 > 350
+    ? '#F9B88C' 
     : co2 > 300 
-    ? '#FFCAA9' 
+    ? '#FBCA95' 
     : co2 > 250 
-    ? '#FFDBC5' 
+    ? '#FDDBC0' 
     : co2 > 200 
-    ? '#FFEDE2' 
+    ? '#FFEAE2' 
     : co2 > 150 
     ? '#EEFFFF'
     : co2 > 100 
-    ? '#C7F0FF'
+    ? '#C7F0FD'
     : co2 > 75 
-    ? '#AFE1FF' 
+    ? '#AFE1FC' 
     : co2 > 50 
-    ? '#87D1FF' 
+    ? '#87D1FB' 
     : co2 > 40 
-    ? '#5FC2FF'
+    ? '#5FC2FA'
     : co2 > 30 
     ? '#53A6EC'
     : co2 > 20 

@@ -13,7 +13,7 @@ const Home = () => {
       <section>
         <div>
           <h2>Climate change is daunting.</h2>
-          <p>And so are the current levels of CO2 that drive it. <b>It may seem like there’s nothing we can do to stop it.</b></p>
+          <p>And so are the current levels of CO₂ that drive it. <b>It may seem like there’s nothing we can do to stop it.</b></p>
         </div>
       </section>
       
@@ -28,11 +28,11 @@ const Home = () => {
 
       <section class="text-left">
         <div>
-            <p>Though our individual impacts may be small, they adds up. Track the changes in CO2 emissions when we save water, fuel, and trees.</p>
+            <p>Though our individual impacts may be small, they add up. Track the changes in CO₂ emissions when we save water, fuel, and trees by clicking on the links in the navigation bar above.</p>
         </div>
         <img src="faucet.png" alt="dripping faucet"/>
       </section>
-      <section>
+      <section style={{flexDirection: "column"}}>
         <h1>Let's reimagine a lifestyle that preserves our planet</h1>
       </section>
     </div>

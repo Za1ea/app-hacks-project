@@ -45,7 +45,7 @@ export default function InputSlider({ onChange, page, labelText, maxValue = 1000
   };
 
   return (
-    <Box sx={{ width: "90%", marginTop: "1em" }}>
+    <Box sx={{ width: "90%", marginTop: "0.5em" }}>
       <Typography id="input-slider" gutterBottom style={{ marginBottom: 0 }}>
         {labelText}
       </Typography>

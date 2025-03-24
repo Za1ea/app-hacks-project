@@ -21,6 +21,9 @@ function Navbar() {
             <li>
                 <Link to="/every-gallon" className='link-text'>Every Gallon</Link> 
             </li>
+            <li>
+                <Link to="/every-effort" className='link-text'>Every Effort</Link> 
+            </li>
         </ul>
       </div>
     </nav>
