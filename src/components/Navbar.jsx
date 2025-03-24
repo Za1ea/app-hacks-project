@@ -13,7 +13,7 @@ function Navbar() {
                 <Link to="/" className='link-text'>Home</Link>  {/* Use Link instead of <a> */}
             </li>
             <li>
-                <Link to="/simulation" className='link-text'>Simulation</Link>  {/* Use Link instead of <a> */}
+                <Link to="/every-tree" className='link-text'>Every Tree</Link>  {/* Use Link instead of <a> */}
             </li>
         </ul>
       </div>

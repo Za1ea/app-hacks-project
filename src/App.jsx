@@ -12,7 +12,7 @@ function App() {
       
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/simulation" element={<SimulationCO2 />} />
+        <Route path="/every-tree" element={<SimulationCO2 />} />
       </Routes>
     </Router>
   );

@@ -1,7 +1,9 @@
 #root {
   max-width: 1280px;
+  width: 100vw;
+  height: 100vh;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
 }
 
@@ -19,8 +21,26 @@
 } 
 
 .content-container {
-  padding: 5%;
-  margin: 5%
+  padding: 1% 5%;
+  margin: auto;
+  width: 80%;
+  height: 100vh;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+}
+.info h4 {
+  margin: 0%;
+  color: #777;
 }
 
 .logo {
@@ -89,4 +109,13 @@
 .link-text {
   color: #fff;
   text-decoration: none;
+}
+
+.small-img {
+  width: 80%
+}
+
+.text-container {
+  margin: 0 0 0 1em;
+  padding: 1em 0;
 }
