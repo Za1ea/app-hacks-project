@@ -10,10 +10,16 @@ function Navbar() {
       <div className="navbar-center">
         <ul className="nav-links">
             <li>
-                <Link to="/" className='link-text'>Home</Link>  {/* Use Link instead of <a> */}
+                <Link to="/" className='link-text'>Home</Link>  
             </li>
             <li>
-                <Link to="/every-tree" className='link-text'>Every Tree</Link>  {/* Use Link instead of <a> */}
+                <Link to="/every-tree" className='link-text'>Every Tree</Link> 
+            </li>
+            <li>
+                <Link to="/every-commute" className='link-text'>Every Commute</Link> 
+            </li>
+            <li>
+                <Link to="/every-gallon" className='link-text'>Every Gallon</Link> 
             </li>
         </ul>
       </div>

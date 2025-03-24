@@ -13,7 +13,7 @@ const Input = styled(MuiInput)`
   width: 3.5em;
 `;
 
-export default function InputSlider({ onChange, page, labelText }) {
+export default function InputSlider({ onChange, page, labelText, maxValue = 1000 }) {
   const [value, setValue] = React.useState(0);
   var imgSrc = Tree;
 
@@ -39,14 +39,14 @@ export default function InputSlider({ onChange, page, labelText }) {
   const handleBlur = () => {
     if (value < 0) {
       setValue(0);
-    } else if (value > 1000) {
-      setValue(1000);
+    } else if (value > maxValue) {
+      setValue(maxValue);
     }
   };
 
   return (
-    <Box sx={{ width: "70%", marginTop: "1em" }}>
-      <Typography id="input-slider" gutterBottom>
+    <Box sx={{ width: "90%", marginTop: "1em" }}>
+      <Typography id="input-slider" gutterBottom style={{ marginBottom: 0 }}>
         {labelText}
       </Typography>
       <Grid container spacing={2} style={{ alignItems: 'center' }}>
@@ -59,7 +59,7 @@ export default function InputSlider({ onChange, page, labelText }) {
             value={value}
             valueLabelDisplay="auto"
             min={0}
-            max={1000}
+            max={maxValue}
             onChange={handleSliderChange}
             aria-labelledby="input-slider"
           />
@@ -70,11 +70,10 @@ export default function InputSlider({ onChange, page, labelText }) {
             size="small"
             onChange={handleInputChange}
             onBlur={handleBlur}
-            color="#fff"
             inputProps={{
               step: 10,
               min: 0,
-              max: 1000,
+              max: maxValue,
               type: 'number',
               'aria-labelledby': 'input-slider',
             }}

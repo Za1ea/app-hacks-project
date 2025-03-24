@@ -60,41 +60,55 @@ function ChoroplethMap({ scaleFactor }) {
 
   // Define color scale for emissions
   const getColor = (co2) => {
-    return co2 > 4000
-      ? '#360000'
-      : co2 > 1000
-      ? '#5c080a'
-      : co2 > 832
-      ? '#610416'
-      : co2 > 666
-      ? '#730123'
-      : co2 > 500
-      ? '#7D1029'
-      : co2 > 350
-      ? '#87202F'
-      : co2 > 200
-      ? '#912F35'
-      : co2 > 150
-      ? '#9B3F3B'
-      : co2 > 100
-      ? '#A54E41'
-      : co2 > 75
-      ? '#AF5E47'
-      : co2 > 50
-      ? '#B96D4D'
-      : co2 > 35
-      ? '#C27C52'
-      : co2 > 20
-      ? '#CC8C58'
-      : co2 > 15
-      ? '#D69B5E'
-      : co2 > 10
-      ? '#EABA6A'
-      : co2 > 5
-      ? '#F4CA70'
-      : co2 > 0
-      ? '#ffeab3'
-      : '#FFFFDC';
+    return co2 > 10000 
+    ? '#520000'
+    : co2 > 4000 
+    ? '#6F150C'
+    : co2 > 2000 
+    ? '#8F2A17'
+    : co2 > 1000 
+    ? '#A03F23'
+    : co2 > 900 
+    ? '#CC552F'
+    : co2 > 800 
+    ? '#D26A3B'
+    : co2 > 700 
+    ? '#E97F46'
+    : co2 > 600 
+    ? '#FF9452' 
+    : co2 > 500 
+    ? '#FFA66F'
+    : co2 > 400
+    ? '#FFB88C' 
+    : co2 > 300 
+    ? '#FFCAA9' 
+    : co2 > 250 
+    ? '#FFDBC5' 
+    : co2 > 200 
+    ? '#FFEDE2' 
+    : co2 > 150 
+    ? '#EEFFFF'
+    : co2 > 100 
+    ? '#C7F0FF'
+    : co2 > 75 
+    ? '#AFE1FF' 
+    : co2 > 50 
+    ? '#87D1FF' 
+    : co2 > 40 
+    ? '#5FC2FF'
+    : co2 > 30 
+    ? '#53A6EC'
+    : co2 > 20 
+    ? '#478BD8' 
+    : co2 > 15 
+    ? '#3B6FC5' 
+    : co2 > 10 
+    ? '#2F54B2' 
+    : co2 > 5 
+    ? '#23389F' 
+    : co2 > 0 
+    ? '#171D8B' 
+    : '#0B0178'; 
   };
 
   const style = (feature) => {
@@ -143,23 +157,49 @@ function ChoroplethMap({ scaleFactor }) {
   if (!geoData || !co2Data) return <div>Loading...</div>;
 
   return (
-    <MapContainer key={scaleFactor} center={[20, 0]} zoom={2} style={{ width: '100%', height: '80%' }}>
+    <MapContainer key={scaleFactor} center={[20, 0]} zoom={2} style={{ width: '100%', height: '75%' }}>
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       <GeoJSON data={geoData} style={style} onEachFeature={onEachFeature} />
       <div style={{
-      position: 'absolute',
-      marginTop: '30em',
-      marginLeft: '1em',
-      background: 'rgba(255, 255, 255, 0.7)',
-      color: '#222',
-      padding: '10px',
-      borderRadius: '5px',
-      fontSize: '16px',
-      fontWeight: 'bold',
-      zIndex: 1100
-    }}>
-      Total Emissions: {totalEmissions.toFixed(2)} Megatonnes
-    </div>
+        position: 'absolute',
+        marginTop: '26em',
+        marginLeft: '2em',
+        background: 'rgba(255, 255, 255, 0.7)',
+        color: '#222',
+        padding: '10px',
+        borderRadius: '5px',
+        fontSize: '16px',
+        fontWeight: 'bold',
+        zIndex: 1100
+      }}>
+        Total CO₂ Emissions: {totalEmissions.toFixed(2)} Megatonnes
+      </div>
+       {/* Gradient Legend */}
+      <div style={{
+        position: 'absolute',
+        bottom: '2em',
+        marginLeft: '66em',
+        background: 'rgba(255, 255, 255, 0.7)',
+        color: "black",
+        padding: '0% 1% 1% 1%',
+        borderRadius: '5px',
+        zIndex: 1100
+      }}>
+        <h4>CO₂ Emissions (Megatonnes)</h4>
+        <div style={{
+          width: '150px',
+          height: '10px',
+          background: 'linear-gradient(to left, #620000, #78150C, #8F2A17, #A03F23, #CC552F, #D26A3B, #E97F46, #FF9452, #FFA66F, #FFB88C, #FFCAA9, #FFDBC5, #FFEDE2, #EEFFFF, #C7F0FF, #AFE1FF, #87D1FF, #5FC2FF, #53A6EC, #478BD8, #3B6FC5, #2F54B2, #23389F, #171D8B, #0B0178)',
+          marginBottom: '5px'
+        }}></div>
+        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '1em' }}>
+          <span>0</span>
+          <span>15</span>
+          <span>100</span>
+          <span>400</span>
+          <span>4000+</span>
+        </div>
+      </div>
   </MapContainer>
   );
 }

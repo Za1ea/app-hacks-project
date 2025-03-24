@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
 #root {
   max-width: 1280px;
   width: 100vw;
@@ -5,6 +7,8 @@
   margin: 0 auto;
   padding: 1rem;
   text-align: center;
+
+  --light-blue: #dae6f7;
 }
 
 .align-center {
@@ -15,16 +19,46 @@
   text-align: left
 }
 
+.align-right {
+  text-align: right
+}
+
 .big-logo {
-  width: 75%;
-  max-width: 300px;
+  margin-top: 2%;
+  width: 80%;
+  max-width: 400px;
 } 
+
+.centered {
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em
+}
 
 .content-container {
   padding: 1% 5%;
   margin: auto;
   width: 80%;
   height: 100vh;
+  margin-bottom: 2%
+}
+
+.home-container {
+  padding: 0.5% 5%;
+  margin: auto;
+  width: 90%;
+  margin-bottom: 2%
+}
+
+.img-container {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .info {
@@ -88,8 +122,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
-  color: #fff;
+  background-color: #335a99;
+  color: var(--light-blue);
   padding: 1rem;
   z-index: 1500;           /* Ensure navbar stays above content */
 }
@@ -98,12 +132,12 @@
   list-style-type: none;
   display: flex;
   justify-content: center;
-  margin: 0;
+  margin: 0 1rem;
   padding: 0;
 }
 
 .navbar-center .nav-links li {
-  margin-right: 1rem;
+  margin-right: 3rem;
 }
 
 .link-text {
@@ -112,10 +146,45 @@
 }
 
 .small-img {
-  width: 80%
+  width: 70%
 }
 
 .text-container {
   margin: 0 0 0 1em;
   padding: 1em 0;
+  color: var(--light-blue)
+}
+
+.text-left {
+  flex-direction: row; /* Text on the left, image on the right */
+}
+
+.text-right {
+  flex-direction: row-reverse; /* Text on the right, image on the left */
+}
+
+section {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  color: var(--light-blue)
+}
+
+section img {
+  width: 20%;
+  margin: 0 2%;
+}
+
+section h2 {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 1.8em
+}
+
+section h1 {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 3em
+}
+
+section p {
+  font-size: 150%;
 }
